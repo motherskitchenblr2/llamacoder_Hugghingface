@@ -25,7 +25,7 @@ importers:
         version: 0.3.1(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@conform-to/zod':
         specifier: ^1.2.2
-        version: 1.8.2(zod@3.25.76)
+        version: 1.8.2(zod@4.6.6)
       '@date-fns/tz':
         specifier: 1.5.0
         version: 1.5.0
@@ -61,7 +61,7 @@ importers:
         version: 0.8.6
       braintrust:
         specifier: ^3.21.0
-        version: 3.21.0(@aws-sdk/credential-provider-web-identity@3.972.66)(zod@3.25.76)
+        version: 3.21.0(@aws-sdk/credential-provider-web-identity@3.972.66)(zod@4.6.6)
       class-variance-authority:
         specifier: 0.7.1
         version: 0.7.1
@@ -156,8 +156,8 @@ importers:
         specifier: ^1.1.2
         version: 1.1.2(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       zod:
-        specifier: ^3.24.1
-        version: 3.25.76
+        specifier: ^4.6.6
+        version: 4.6.6
     devDependencies:
       '@tailwindcss/browser':
         specifier: ^4.3.2
@@ -1720,6 +1720,7 @@ packages:
   '@smithy/core@3.29.8':
     resolution: {integrity: sha512-rpCbCV+TimOBi3VLNBMmtTvgfOWcFIEAru3+TFlG87SL2F+te4jOnnNR+cf3uR4eJ5Qf4LnT80fqnBKgPRS6zA==}
     engines: {node: '>=18.0.0'}
+    deprecated: Deprecated due to a bug in custom logger data redaction. See https://github.com/aws/aws-sdk-js-v3/issues/8393.
 
   '@smithy/credential-provider-imds@4.4.13':
     resolution: {integrity: sha512-X+2HNZhWi5i3rJsCas0LPf6fTQUaKyJ40zd8aTO/bwpRfpU3biYaqLr7C1WMibL7PVKJalpi1PyybjGPNoHC8Q==}
@@ -4251,6 +4252,9 @@ packages:
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
+  zod@4.6.6:
+    resolution: {integrity: sha512-4UmzQUF5fxvfcYHlbjBmejU+w+hbDnWFx4aS8kBx7nPBHcO2SqPbpAG8snbdg+Xse4pRefR98hgjFgIMCI/UhA==}
+
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
@@ -4673,10 +4677,10 @@ snapshots:
 
   '@conform-to/dom@1.8.2': {}
 
-  '@conform-to/zod@1.8.2(zod@3.25.76)':
+  '@conform-to/zod@1.8.2(zod@4.6.6)':
     dependencies:
       '@conform-to/dom': 1.8.2
-      zod: 3.25.76
+      zod: 4.6.6
 
   '@date-fns/tz@1.5.0': {}
 
@@ -5858,7 +5862,7 @@ snapshots:
     dependencies:
       fill-range: 7.1.1
 
-  braintrust@3.21.0(@aws-sdk/credential-provider-web-identity@3.972.66)(zod@3.25.76):
+  braintrust@3.21.0(@aws-sdk/credential-provider-web-identity@3.972.66)(zod@4.6.6):
     dependencies:
       '@next/env': 14.2.35
       '@types/estree': 1.0.8
@@ -5890,8 +5894,8 @@ snapshots:
       termi-link: 1.1.0
       unplugin: 2.3.11
       uuid: 11.1.1
-      zod: 3.25.76
-      zod-to-json-schema: 3.25.2(zod@3.25.76)
+      zod: 4.6.6
+      zod-to-json-schema: 3.25.2(zod@4.6.6)
     optionalDependencies:
       '@braintrust/bt-darwin-arm64': 0.12.0
       '@braintrust/bt-darwin-x64': 0.12.0
@@ -8452,6 +8456,12 @@ snapshots:
     dependencies:
       zod: 3.25.76
 
+  zod-to-json-schema@3.25.2(zod@4.6.6):
+    dependencies:
+      zod: 4.6.6
+
   zod@3.25.76: {}
+
+  zod@4.6.6: {}
 
   zwitch@2.0.4: {}
